@@ -24,17 +24,17 @@ var MongooseTodoModel = mongoose.model('TODO', todoSchema);
 //public function starts here
 
 /**
- *  Save new item to mongo db
+ * Save new item to mongo db.
  * @param params input params
  * @param callback
  */
-module.exports = function saveTodoItem(params, callback) {
+exports.saveTodoItem = function saveTodoItem(params, callback) {
 	var todoData,
 		newTodo;
 
 	todoData = {
 		description: params.description,
-		completed: false
+		completed: params.completed
 	};
 	var newTodo = new MongooseTodoModel(todoData);
 	newTodo.save(function(err, document){
