@@ -15,7 +15,9 @@
     "kraken-devtools": "^1.0.0",
     "kraken-js": "^1.0.1",
     "less": "^1.7.5",
-    "localizr": "^1.0.0"
+    "localizr": "^1.0.0",
+    "mongoose": "^3.8.17",
+    "mongoose-auto-increment": "^3.0.8"
   },
   "devDependencies": {
     "mocha": "^1.18.0",
