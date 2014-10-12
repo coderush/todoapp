@@ -1,8 +1,9 @@
 define([
 	'jquery',
 	'underscore',
-	'backbone'
-], function($, _, Backbone) {
+	'backbone',
+	'app/views/todoListView'
+], function($, _, Backbone, TodoListView) {
 	var TodoRouter = Backbone.Router.extend({
 		routes: {
 			'': 'index',
@@ -22,9 +23,8 @@ define([
 
 		index: function() {
 			//render the index page
-			alert("Index Route");
-			//var todoListView = new TodoListView();
-			//todoListView.render();
+			var todoListView = new TodoListView();
+			todoListView.render();
 		},
 
 		defaultAction: function() {
