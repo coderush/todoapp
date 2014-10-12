@@ -2,14 +2,20 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'app/views/todoListView'
-], function($, _, Backbone, TodoListView) {
+	'app/views/todoListView',
+	'app/collections/todoList'
+], function($, _, Backbone, TodoListView, TodoList) {
 	var TodoRouter = Backbone.Router.extend({
 		routes: {
 			'': 'index',
 			'todos/:id': 'openTodo',
 			//default
 			'*actions': 'defaultAction'
+		},
+
+		initialize: function() {
+			this.todoList = new TodoList();
+			this.todoListView = new TodoListView({collection : this.todoList});
 		},
 
 		start: function() {
@@ -23,8 +29,7 @@ define([
 
 		index: function() {
 			//render the index page
-			var todoListView = new TodoListView();
-			todoListView.render();
+			this.todoList.fetch();
 		},
 
 		defaultAction: function() {
@@ -35,6 +40,9 @@ define([
 	var initialize = function() {
 		var todoRouter = new TodoRouter();
 		todoRouter.start();
+		$(document).ready(function(){
+			todoRouter.trigger('');
+		});
 	};
 
 	return {

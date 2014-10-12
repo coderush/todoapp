@@ -7,9 +7,7 @@
 </head>
 <body>
 <div id="wrapper" class="content">
-    <div id="container">
-
-    </div>
+    <ul id="container"> </ul>
 </div>
 <script data-main="/js/main" src="/js/vendor/bower_components/requirejs/require.js"></script>
 </body>
