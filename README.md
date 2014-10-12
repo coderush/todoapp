@@ -1,4 +1,3 @@
-todoapp
-=======
+# todoapp-server
 
-A simple todo application
+A RESTful web service for TODO application.
