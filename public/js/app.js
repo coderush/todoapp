@@ -1,19 +1,15 @@
-'use strict';
+define([
+	'jquery',
+	'underscore',
+	'backbone',
+	'router'
+], function($, _, Backbone, Router){
 
+	var initialize = function() {
+		Router.initialize();
+	};
 
-requirejs.config({
-    paths: {}
-});
-
-
-require([/* Dependencies */], function () {
-
-    var app = {
-        initialize: function () {
-            // Your code here
-        }
-    };
-
-    app.initialize();
-
+	return {
+		initialize : initialize
+	}
 });
