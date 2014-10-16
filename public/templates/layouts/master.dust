@@ -3,12 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <title>{+title /}</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/app.css" />
+
 </head>
+
 <body>
+
+{>"partials/header/navigation" /}
+
 <div id="wrapper" class="content">
-    <ul id="container"> </ul>
+
+
+    <div class=".container-fluid">
+        <div class="row" id="todos"></div>
+    </div>
 </div>
 <script data-main="/js/main" src="/js/vendor/bower_components/requirejs/require.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

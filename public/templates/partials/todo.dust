@@ -1,0 +1,6 @@
+<div class="checkbox col-md-12">
+    <label>
+        <input type="checkbox" value="">
+        <%= id %>  <%= description %>
+    </label>
+</div>

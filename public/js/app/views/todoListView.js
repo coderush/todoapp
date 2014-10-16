@@ -2,13 +2,13 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'text!/templates/partials/todo.html',
+	'text!/templates/partials/todo.dust',
 	'app/collections/todoList'
 ], function($, _, Backbone, todoListTemplate, TodoList){
 	var TodoListView = Backbone.View.extend({
 
 		//top level element
-		el: $('#container'),
+		el: $('#todos'),
 
 		template : _.template( todoListTemplate ),
 
