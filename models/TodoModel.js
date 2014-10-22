@@ -46,12 +46,22 @@ exports.saveTodoItem = function saveTodoItem(params, callback) {
 	});
 }
 
-exports.getAllItems = function  getAllItems(callback) {
+exports.getAllItems = function getAllItems(callback) {
 	MongooseTodoModel.find(function(err, response){
 		if(err) {
 			callback(err);
 		} else {
 			callback(null, response);
+		}
+	});
+}
+
+exports.deleteTodoItem = function deleteTodoItem(id, callback) {
+	MongooseTodoModel.remove({id : id}, function(err){
+		if(err) {
+			callback(err);
+		} else {
+			callback(null);
 		}
 	});
 }

@@ -30,4 +30,17 @@ module.exports = function(router) {
 			res.json(req.model);
 		});
 	});
+
+	router.delete('/:id', function(req, res) {
+		var id = req.params.id;
+		req.model = {};
+		TodoModel.deleteTodoItem(id, function(err){
+			if(err) {
+				req.model.status = 1;
+			} else {
+				req.model.status = 0;
+			}
+			res.json(req.model);
+		});
+	});
 }

@@ -1,7 +1,5 @@
-<div class="checkbox col-md-12">
-    <label>
+<div class="checkbox col-md-12 todo-item" data-value="<%= id %>">
+        <span class="glyphicon glyphicon-trash delete-todo"></span>
         <input type="checkbox" value="">
-        <input type="hidden" value='<%= id %>' >
-             <%= description %>
-    </label>
+        <span><%= description %></span>
 </div>

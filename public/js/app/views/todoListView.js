@@ -12,13 +12,15 @@ define([
 		el: $('#todos'),
 
 		events: {
-			'keypress .add-todo' : 'addTodo'
+			'keypress .add-todo' : 'addTodo',
+			'click .todo-item' : 'deleteTodo'
 		},
 
 		template : _.template( todoListTemplate ),
 
 		initialize: function() {
 			this.collection.on('add', this.addOne, this);
+			this.collection.on('destroy', this.removeItem, this);
 		},
 
 		addTodo: function(event) {
@@ -41,6 +43,21 @@ define([
 					}
 				});
 			}
+		},
+
+		deleteTodo: function(event) {
+			var id;
+			id = $(event.currentTarget).data().value;
+			this.collection.forEach(function(model){
+				if(model.id && model.id === id) {
+					model.destroy();
+				}
+			});
+		},
+
+		removeItem: function(model) {
+			this.collection.remove(model);
+			this.$el.find("[data-value='" + model.id + "']").remove();
 		},
 
 		render: function() {
