@@ -4,11 +4,15 @@
 define([
 	'jquery',
 	'underscore',
-	'backbone'
-], function($, _, Backbone){
+	'backbone',
+	'../models/todo'
+], function($, _, Backbone, TodoModel){
 
 	var TodoList = Backbone.Collection.extend({
 		url:'/todos',
+
+		model: TodoModel,
+
 		parse: function(response) {
 			return response.data;
 		}

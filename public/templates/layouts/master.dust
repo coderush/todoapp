@@ -15,13 +15,20 @@
 
 {>"partials/header/navigation" /}
 
-<div id="wrapper" class="content">
+<div class=".container-fluid" id="wrapper">
+    <div class="row">
+        <div class="col-xs-6 col-sm-12 col-md-12" id="todos">
+            <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-th-large"></span></div>
+                <input type="text" class="form-control add-todo" placeholder="Add more todo items">
+            </div>
 
+            <div class="row" id="todos-list">
 
-    <div class=".container-fluid">
-        <div class="row" id="todos"></div>
+            </div>
+        </div>
     </div>
-</div>
+ </div>
 <script data-main="/js/main" src="/js/vendor/bower_components/requirejs/require.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
