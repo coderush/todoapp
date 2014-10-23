@@ -34,30 +34,48 @@ exports.saveTodoItem = function saveTodoItem(params, callback) {
 
 	todoData = {
 		description: params.description,
-		completed: params.completed
+		completed: params.completed || false
 	};
 	var newTodo = new MongooseTodoModel(todoData);
 	newTodo.save(function(err, document){
-		if(err) {
+		if (err) {
 			callback(err);
 		} else {
 			callback(err, document);
 		}
 	});
-}
+};
 
 exports.getAllItems = function getAllItems(callback) {
 	MongooseTodoModel.find(function(err, response){
-		if(err) {
+		if (err) {
 			callback(err);
 		} else {
 			callback(null, response);
 		}
 	});
-}
+};
 
 exports.deleteTodoItem = function deleteTodoItem(id, callback) {
 	MongooseTodoModel.remove({id : id}, function(err){
+		if (err) {
+			callback(err);
+		} else {
+			callback(null);
+		}
+	});
+};
+
+exports.updateTodoItem = function updateTodoItem(params, callback) {
+	var toUpdate = {};
+	if(params.completed != undefined) {
+		toUpdate.completed = params.completed;
+	}
+	if(params.description != undefined) {
+		toUpdate.description = params.description;
+	}
+
+	MongooseTodoModel.findOneAndUpdate({id : params.id}, toUpdate, function(err){
 		if(err) {
 			callback(err);
 		} else {
