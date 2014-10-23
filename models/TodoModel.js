@@ -68,12 +68,8 @@ exports.deleteTodoItem = function deleteTodoItem(id, callback) {
 
 exports.updateTodoItem = function updateTodoItem(params, callback) {
 	var toUpdate = {};
-	if(params.completed != undefined) {
-		toUpdate.completed = params.completed;
-	}
-	if(params.description != undefined) {
-		toUpdate.description = params.description;
-	}
+	toUpdate.completed = params.completed;
+	toUpdate.description = params.description;
 
 	MongooseTodoModel.findOneAndUpdate({id : params.id}, toUpdate, function(err){
 		if(err) {
