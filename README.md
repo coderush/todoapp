@@ -11,6 +11,6 @@ A simple todo application which can be used for bootstrapping a project.
   - jquery (v2.1.1)
   - dustjs (v2.4.2)
 - Backend stack : 
-  - mongoose (3.8.17)
-  - express (4.9.5)
-  - krakenjs (1.0.3)
+  - mongoose (v3.8.17)
+  - express (v4.9.5)
+  - krakenjs (v1.0.3)
