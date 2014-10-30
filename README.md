@@ -1,6 +1,14 @@
 # todoapp
 
-A simple todo application.
+A simple todo application which can be used for bootstrapping a project.
 
-- Frontend : backbone.js, require.js
-- Backend : mongoose, express, kraken
+- Frontend stack : 
+  - backbone.js
+  - require.js
+  - less
+  - flat-ui
+  - bootstrap
+- Backend : 
+  - mongoose
+  - express
+  - kraken
