@@ -1,3 +1,6 @@
-# todoapp-server
+# todoapp
 
-A RESTful web service for TODO application.
+A simple todo application.
+
+- Frontend : backbone.js, require.js
+- Backend : mongoose, express, kraken
