@@ -5,8 +5,8 @@
     <title>{+title /}</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/flatui/css/flat-ui.css">
     <link rel="stylesheet" href="/css/app.css" />
 
 </head>
@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-xs-6 col-sm-12 col-md-12" id="todos">
             <div class="input-group">
-                <div class="input-group-addon"><span class="glyphicon glyphicon-th-large"></span></div>
+                <div class="input-group-addon"><span class="fui-menu-24"></span></div>
                 <input type="text" class="form-control add-todo" placeholder="Add more todo items">
             </div>
 
@@ -30,6 +30,6 @@
     </div>
  </div>
 <script data-main="/js/main" src="/js/vendor/bower_components/requirejs/require.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 </body>
 </html>

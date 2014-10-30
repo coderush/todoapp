@@ -28,11 +28,11 @@ define([
 
 		updateTodo: function(event) {
 			var id = $(event.currentTarget).data().value,
-				isCompleted = $(event.target).is(':checked');
+				completeTodo = !($(event.target).parent().hasClass("checked"));
 			this.collection.forEach(function(model){
 				if(model.id && model.id === id) {
 					model.save({
-						completed: isCompleted
+						completed: completeTodo
 					});
 				}
 			});
@@ -53,7 +53,7 @@ define([
 						// model was saved successfully, now add it to the collection
 						self.collection.add(todoModel.get('data'));
 					},
-					error: function(){
+					error: function() {
 						alert('failed to add todo');
 					}
 				});

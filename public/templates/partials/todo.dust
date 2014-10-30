@@ -1,10 +1,20 @@
-<div class="checkbox col-md-12" data-value="<%= id %>">
-        <span data-value="<%= id %>" class="glyphicon glyphicon-trash delete-todo"></span>
-        <% if (completed === true) { %>
-             <input data-value="<%= id %>" class="complete-todo" type="checkbox" checked/>
-             <span><del><%= description %></del></span>
-    <% } else { %>
-             <input data-value="<%= id %>" class="complete-todo" type="checkbox" />
-             <span><%= description %></span>
-    <% } %>
+<div class="col-md-12" data-value="<%= id %>">
+        <div data-value="<%= id %>" class="glyphicon glyphicon-trash delete-todo pull-left"></div>
+        <div class="pull-left complete-todo" data-value="<%= id %>">
+            <% if (completed === true) { %>
+            <label class="checkbox checked" for="complete-todo-checkbox">
+                <span class="icon"></span>
+                <span class="icon-to-fade"></span>
+                <input type="checkbox" class="complete-todo-checkbox">
+                <span class="todo-description"><del><%= description %></del></span>
+            </label>
+            <% } else { %>
+            <label class="checkbox" for="complete-todo-checkbox" >
+                <span class="icon"></span>
+                <span class="icon-to-fade"></span>
+                <input type="checkbox" class="complete-todo-checkbox" >
+                <span class="todo-description"><%= description %></span>
+            </label>
+            <% } %>
+        </div>
 </div>
