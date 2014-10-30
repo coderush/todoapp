@@ -1,6 +1,6 @@
 # todoapp
 
-A simple todo application which can be used for bootstrapping a project.
+A simple todo application which can be used for quickly bootstrapping a project.
 
 - Frontend stack : 
   - backbone.js
