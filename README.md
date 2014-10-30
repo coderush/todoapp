@@ -8,7 +8,7 @@ A simple todo application which can be used for bootstrapping a project.
   - less
   - flat-ui
   - bootstrap
-- Backend : 
+- Backend stack : 
   - mongoose
   - express
   - kraken
